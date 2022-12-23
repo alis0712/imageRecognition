@@ -3,6 +3,7 @@
 The goal of this project is to use a neural architecture such as CNN or a variation of CNN and detect a set of 100 images using the CIFAR dataset. To do this I first loaded in the data, and started off with MNIST dataset and then added in CIFAR-10 data. Fashion MNIST data was used as benchmark. Fashion MNIST data is a 28x28 grayscale data it includes labels such as t-shirts, shoes, pants and so forth. CIFAR-10 dataset is a 32x32x3 color images. It includes dataset such as automobile, frog, horse, and so forth. Figure below shows what CIFAR-10 and MNIST data pertains: 
 
 ![image](https://user-images.githubusercontent.com/62857780/209239438-ed94b707-3955-4961-83e3-d52f92c125ed.png)
+
 CIFAR-10 and Fashion MNIST Datasets
 
 
@@ -56,19 +57,26 @@ Example of data augmentation program implemented in Python
 
 
 ## Batch Normalization
-Is a method which is used to make CNN faster and more efficient through normalization of layer’s inputs by either recentering and rescaling. The recentering and rescaling process is done through a process called internal covariate shift. The \beta\ and\ \gamma are learned through gradient descent. Batch normalization is calculated the following way:  
+Is a method which is used to make CNN faster and more efficient through normalization of layer’s inputs by either recentering and rescaling. The recentering and rescaling process is done through a process called internal covariate shift. The \beta\ and\ \gamma are learned through gradient descent. Batch normalization is 
+
+calculated the following way:  
+
 z=\frac{x\ -\ \mu_b}{\sigma_B} , y=z\gamma+\ \beta
+
 The process of batch normalization is as follows: 
+
 Feedforward Network: BatchNorm --> Dense --> BathNorm --> Dense -->  BatchNorm --> Dense
+
 Batch normalization acts as a regularization. The regularization process helps with overfitting. Since every batch is slightly different, slightly different values of mean and standard deviation are obtained. They are often the true mean and standard deviation of the whole dataset. And this is essentially noise and using noise during the training makes the neural network impermeable to noise. In convolution layers Batch Norms are applied the following way: 
 Conv --> BN --> Conv --> BN --> Conv --> BN --> Flatten --> Dense --> Dense
-
 
 
 ## Results and Conclusion
 After implementing the code, we get the following results: 
 Fashion MNIST Data – Training Dataset Results 
+
 ![image](https://user-images.githubusercontent.com/62857780/209240311-619a92be-27a6-48cd-8270-15e813cd4b3e.png)
+
 Training data set accuracy and Test data set accuracy
 With Fashion MNIST data we notice a training data accuracy of 0.9572 with a test accuracy of 0.8983
 
@@ -180,8 +188,12 @@ Convolution Neural Networks (CNN) is a powerful algorithm that can be used to so
 
 ## References
 https://www.ibm.com/cloud/learn/neural-networks
+
 https://www.cs.toronto.edu/~urtasun/courses/CSC411
+
 https://machinelearningmastery.com/batch-normalization-for-training-of-deep-neural-networks/
+
 http://www.cs.cornell.edu/courses/cs5670/2021sp/lectures/lec21_cnns_for_web.pdf
+
 https://github.com/s9k96/Image-Classification-on-CIFAR10-using-CNN/blob/master/main.ipynb
 
